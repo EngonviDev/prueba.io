@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Equipos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de Equipos de Computación</h1>
+    
+    <div>
+        <h2>Agregar Equipo</h2>
+        <input type="text" id="marcaInput" placeholder="Marca del equipo">
+        <input type="text" id="ramInput" placeholder="Cantidad de RAM (GB)">
+        <input type="text" id="procesadorInput" placeholder="Tipo de procesador">
+        <input type="text" id="almacenamientoInput" placeholder="Capacidad de almacenamiento (GB)">
+        <select id="tipoInput">
+            <option value="">Seleccionar tipo</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Escritorio">Escritorio</option>
+        </select>
+        <button onclick="agregarEquipo()">Agregar</button>
+    </div>
+
+    <h2>Equipos Ingresados</h2>
+    <table id="tablaEquipos">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>RAM (GB)</th>
+                <th>Procesador</th>
+                <th>Almacenamiento (GB)</th>
+                <th>Tipo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h2>Equipos Salidos</h2>
+    <table id="tablaSalidas">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>RAM (GB)</th>
+                <th>Procesador</th>
+                <th>Almacenamiento (GB)</th>
+                <th>Tipo</th>
+                <th>A quien se le entrega</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Formulario para ingresar el nombre de a quién se le entrega el equipo -->
+    <div id="formSalida" style="display: none;">
+        <h3>Entregar Equipo</h3>
+        <input type="text" id="nombreEntregaInput" placeholder="Nombre de quien recibe el equipo">
+        <button onclick="confirmarSalida()">Confirmar Salida</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

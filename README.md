@@ -1,2 +1,1 @@
-# prueba.io
-prueba
+# equipos.github.io
